@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Anime:</strong>
+  <%= @favourite.anime %>
+</p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @favourite.movie %>
+</p>
+
+<p>
+  <strong>Television show:</strong>
+  <%= @favourite.television_show %>
+</p>
+
+<%= link_to 'Edit', edit_favourite_path(@favourite) %> |
+<%= link_to 'Back', favourites_path %>

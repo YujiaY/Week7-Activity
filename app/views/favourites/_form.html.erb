@@ -1,0 +1,32 @@
+<%= form_for(favourite) do |f| %>
+  <% if favourite.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(favourite.errors.count, "error") %> prohibited this favourite from being saved:</h2>
+
+      <ul>
+      <% favourite.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :anime %>
+    <%= f.text_area :anime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :movie %>
+    <%= f.text_area :movie %>
+  </div>
+
+  <div class="field">
+    <%= f.label :television_show %>
+    <%= f.text_area :television_show %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
